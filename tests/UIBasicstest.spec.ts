@@ -1,6 +1,5 @@
 import { URL, get_user_credentials, users_types } from '../utils/constants';
 import { test, expect } from '../fixtures/baseTest';
-import { stringify } from 'node:querystring';
 
 test('Successfull login', async ({ loginPage, dashboardPage, page }) => {
     // Reset storage state to empty to ensure we are logged out

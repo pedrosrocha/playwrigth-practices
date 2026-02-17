@@ -1,5 +1,7 @@
 import { devices } from '@playwright/test';
 import type { PlaywrightTestConfig } from '@playwright/test';
+import * as dotenv from 'dotenv';
+
 
 const config: PlaywrightTestConfig = {
   testDir: './tests',
@@ -23,7 +25,7 @@ const config: PlaywrightTestConfig = {
     browserName: 'chromium',
     headless: true,
     trace: 'on-first-retry',
-    baseURL: "http://localhost:8080",
+    baseURL: process.env.BASE_URL,
   },
 
 
