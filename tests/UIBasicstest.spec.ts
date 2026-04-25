@@ -1,6 +1,5 @@
 import { URL, get_user_credentials, users_types } from '../utils/constants';
 import { test, expect } from '../fixtures/baseTest';
-import { stringify } from 'node:querystring';
 
 test('Successfull login', async ({ loginPage, dashboardPage, page }) => {
     // Reset storage state to empty to ensure we are logged out
@@ -19,7 +18,7 @@ test('Successfull login', async ({ loginPage, dashboardPage, page }) => {
     )).toBeVisible();
 });
 
-test('Go to projects', async ({ loginPage, page, dashboardPage }) => {
+test('Go to projects', async ({ loginPage, page, dashboardPage, baseURL }) => {
 
 
     await loginPage.LoginAs("admin", users_types.admin);
@@ -31,11 +30,11 @@ test('Go to projects', async ({ loginPage, page, dashboardPage }) => {
     )).toBeVisible();
 
     await dashboardPage.navigateToProjects();
-    await expect(page).toHaveURL(URL + "/Projects");
+    await expect(page).toHaveURL(baseURL + "/Projects");
 });
 
 
-test('Dropdown validation.', async ({ loginPage, page, dashboardPage }) => {
+test('Dropdown validation.', async ({ loginPage, page, dashboardPage, baseURL }) => {
 
     await loginPage.LoginAs("admin", users_types.admin);
 
@@ -45,5 +44,6 @@ test('Dropdown validation.', async ({ loginPage, page, dashboardPage }) => {
 
     await dashboardPage.selectProjectDroppdown(projects[1]);
 
-    await page.goto(URL + "/TestSpecification");
+    await page.goto(baseURL + "/TestSpecification");
+
 });

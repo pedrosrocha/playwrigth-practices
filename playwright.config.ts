@@ -1,9 +1,11 @@
 import { devices } from '@playwright/test';
 import type { PlaywrightTestConfig } from '@playwright/test';
+import * as dotenv from 'dotenv';
+
 
 const config: PlaywrightTestConfig = {
   testDir: './tests',
-  timeout: 40 * 1000,
+  timeout: 10 * 1000,
   expect: {
     timeout: 4 * 1000,
   },
@@ -22,8 +24,10 @@ const config: PlaywrightTestConfig = {
   use: {
     browserName: 'chromium',
     headless: true,
-    trace: 'on-first-retry',
-    baseURL: "http://localhost:8080",
+    screenshot: 'only-on-failure',
+    trace: 'on',
+    //video: 'retain-on-failure',
+    baseURL: process.env.BASE_URL || 'http://localhost:8080',
   },
 
 

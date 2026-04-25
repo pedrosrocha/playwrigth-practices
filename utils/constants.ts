@@ -1,4 +1,4 @@
-export const URL: string = "http://localhost:8080";
+export const URL: string = "http://testclone-webapp:5000";
 export const CREDENTIALS = {
     username: "admin user",
     password: "admin_password"

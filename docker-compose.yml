@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  playwright:
+    build: .
+    shm_size: "2gb"
+    ipc: host
+    environment:
+      - BASE_URL=http://testclone-webapp:5000
+    networks:
+      - testlink-clone_testclone-net
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results
+
+networks:
+  testlink-clone_testclone-net:
+    external: true
+
+
+    
