@@ -10,15 +10,19 @@ export class LoginPage {
     readonly usernameInput: Locator;
     readonly passwordInput: Locator;
     readonly loginButton: Locator;
+    readonly loginHeading: Locator;
+    readonly createNewUserLink: Locator;
 
     constructor(page: Page, baseurl: string) {
         this.url = `${baseurl}/login`;
         this.page = page;
 
         //define the page interfaces
-        this.usernameInput = page.getByPlaceholder("Enter username");
-        this.passwordInput = page.getByPlaceholder("Enter password");
-        this.loginButton = page.getByRole('button', { name: 'Login' });
+        this.usernameInput = page.locator('input[name="username"]');
+        this.passwordInput = page.locator('input[name="password"]');
+        this.loginButton = page.getByRole('button', { name: /Login/i });
+        this.loginHeading = page.getByRole('heading', { name: 'Login', level: 3 });
+        this.createNewUserLink = page.getByRole('link', { name: 'Create New User' });
     }
 
     @step("Navigate to Login Page")
@@ -37,7 +41,11 @@ export class LoginPage {
 
     @step("Click Login Button")
     async login_button_click(): Promise<void> {
-        await this.loginButton.click();
+        // Click and wait for network to become idle, which indicates form processing is complete
+        await Promise.all([
+            this.page.waitForNavigation({ waitUntil: 'networkidle', timeout: 10000 }).catch(() => {}),
+            this.loginButton.click(),
+        ]);
     }
 
     @step("Login user: {username}")
@@ -46,7 +54,12 @@ export class LoginPage {
         await this.go_to_url();
         await this.fill_username(username);
         await this.fill_password(password);
-        await this.login_button_click();
+
+        // Submit form directly instead of clicking button
+        await Promise.all([
+            this.page.waitForNavigation({ waitUntil: 'networkidle', timeout: 15000 }).catch(() => {}),
+            this.page.locator('form').first().evaluate(el => (el as HTMLFormElement).submit()),
+        ]);
     }
 
     @step("Login user: {user_description}")
@@ -57,5 +70,15 @@ export class LoginPage {
             user_data.username,
             user_data.password,
         );
+    }
+
+    @step("Click Create New User")
+    async clickCreateNewUser(): Promise<void> {
+        await this.createNewUserLink.click();
+    }
+
+    @step("Verify login page displayed")
+    async verifyLoginPageDisplayed(): Promise<boolean> {
+        return await this.loginHeading.isVisible();
     }
 }

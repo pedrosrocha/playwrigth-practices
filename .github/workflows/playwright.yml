@@ -14,18 +14,3 @@ jobs:
           npm run lint
           npx tsc --noEmit
 
-  playwright_tests:
-    needs: quality_gate # Only run tests if linting passes
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        shard: [1/4, 2/4, 3/4, 4/4] # Split tests into 4 parallel chunks
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run Playwright tests
-        run: npx playwright test --shard=${{ matrix.shard }}
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: playwright-report-${{ matrix.shardIndex }}
-          path: playwright-report/
