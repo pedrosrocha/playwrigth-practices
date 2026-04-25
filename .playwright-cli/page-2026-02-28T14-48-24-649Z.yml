@@ -1,0 +1,79 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link " Home" [ref=e4] [cursor=pointer]:
+        - /url: /MainPage
+        - generic [ref=e5]: 
+        - text: Home
+      - generic [ref=e6]:
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - link " Logout" [ref=e9] [cursor=pointer]:
+              - /url: /logout
+              - generic [ref=e10]: 
+              - text: Logout
+          - listitem [ref=e11]:
+            - link " Users" [ref=e12] [cursor=pointer]:
+              - /url: /UsersManagement
+              - generic [ref=e13]: 
+              - text: Users
+          - listitem [ref=e14]:
+            - link " Projects" [ref=e15] [cursor=pointer]:
+              - /url: /Projects
+              - generic [ref=e16]: 
+              - text: Projects
+          - listitem [ref=e17]:
+            - link " Test Specification" [ref=e18] [cursor=pointer]:
+              - /url: /TestSpecification
+              - generic [ref=e19]: 
+              - text: Test Specification
+        - combobox [ref=e21]:
+          - option "TO DO list" [selected]
+          - option "new SaaS"
+  - generic [ref=e22]:
+    - paragraph
+    - generic [ref=e23]:
+      - heading "Project Management System" [level=1] [ref=e25]
+      - generic [ref=e26]:
+        - link "New Project" [ref=e28] [cursor=pointer]:
+          - /url: /AddProject
+          - text: New Project
+        - heading "Projects:" [level=2] [ref=e29]
+        - table [ref=e31]:
+          - rowgroup [ref=e32]:
+            - row "Name Status Owner Start Date End Date Created At Updated At Actions" [ref=e33]:
+              - columnheader "Name" [ref=e34]
+              - columnheader "Status" [ref=e35]
+              - columnheader "Owner" [ref=e36]
+              - columnheader "Start Date" [ref=e37]
+              - columnheader "End Date" [ref=e38]
+              - columnheader "Created At" [ref=e39]
+              - columnheader "Updated At" [ref=e40]
+              - columnheader "Actions" [ref=e41]
+          - rowgroup [ref=e42]:
+            - row "TO DO list active admin user 2025-12-01 2025-12-20 2025-12-07 21:04:04 2025-12-07 21:04:04 Delete" [ref=e43]:
+              - cell "TO DO list" [ref=e44]:
+                - link "TO DO list" [ref=e45] [cursor=pointer]:
+                  - /url: /OpenProject/1
+              - cell "active" [ref=e46]:
+                - generic [ref=e47]: active
+              - cell "admin user" [ref=e48]
+              - cell "2025-12-01" [ref=e49]
+              - cell "2025-12-20" [ref=e50]
+              - cell "2025-12-07 21:04:04" [ref=e51]
+              - cell "2025-12-07 21:04:04" [ref=e52]
+              - cell "Delete" [ref=e53]:
+                - button "Delete" [ref=e55] [cursor=pointer]
+            - row "new SaaS active admin user 2026-01-05 2026-01-28 2026-01-18 19:44:18 2026-01-18 19:44:18 Delete" [ref=e56]:
+              - cell "new SaaS" [ref=e57]:
+                - link "new SaaS" [ref=e58] [cursor=pointer]:
+                  - /url: /OpenProject/2
+              - cell "active" [ref=e59]:
+                - generic [ref=e60]: active
+              - cell "admin user" [ref=e61]
+              - cell "2026-01-05" [ref=e62]
+              - cell "2026-01-28" [ref=e63]
+              - cell "2026-01-18 19:44:18" [ref=e64]
+              - cell "2026-01-18 19:44:18" [ref=e65]
+              - cell "Delete" [ref=e66]:
+                - button "Delete" [ref=e68] [cursor=pointer]

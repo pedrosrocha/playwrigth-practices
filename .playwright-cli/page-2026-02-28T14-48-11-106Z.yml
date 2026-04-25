@@ -1,0 +1,61 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link " Home" [ref=e4] [cursor=pointer]:
+        - /url: /MainPage
+        - generic [ref=e5]: 
+        - text: Home
+      - generic [ref=e6]:
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - link " Logout" [ref=e9] [cursor=pointer]:
+              - /url: /logout
+              - generic [ref=e10]: 
+              - text: Logout
+          - listitem [ref=e11]:
+            - link " Users" [ref=e12] [cursor=pointer]:
+              - /url: /UsersManagement
+              - generic [ref=e13]: 
+              - text: Users
+          - listitem [ref=e14]:
+            - link " Projects" [ref=e15] [cursor=pointer]:
+              - /url: /Projects
+              - generic [ref=e16]: 
+              - text: Projects
+          - listitem [ref=e17]:
+            - link " Test Specification" [ref=e18] [cursor=pointer]:
+              - /url: /TestSpecification
+              - generic [ref=e19]: 
+              - text: Test Specification
+        - combobox [ref=e21]:
+          - option "TO DO list" [selected]
+          - option "new SaaS"
+  - generic [ref=e22]:
+    - paragraph
+    - generic [ref=e23]:
+      - heading "User Management System" [level=1] [ref=e25]
+      - generic [ref=e26]:
+        - heading "Users:" [level=2] [ref=e27]
+        - table [ref=e29]:
+          - rowgroup [ref=e30]:
+            - row "Username Email User Level Actions" [ref=e31]:
+              - columnheader "Username" [ref=e32]
+              - columnheader "Email" [ref=e33]
+              - columnheader "User Level" [ref=e34]
+              - columnheader "Actions" [ref=e35]
+          - rowgroup [ref=e36]:
+            - row "admin user admin@example.com Admin Delete Reset Password" [ref=e37]:
+              - cell "admin user" [ref=e38]
+              - cell "admin@example.com" [ref=e39]
+              - cell "Admin" [ref=e40]:
+                - combobox [ref=e42]:
+                  - option "Viewer"
+                  - option "Admin" [selected]
+                  - option "Editor"
+              - cell "Delete Reset Password" [ref=e43]:
+                - button "Delete" [ref=e45] [cursor=pointer]
+                - link "Reset Password" [ref=e46] [cursor=pointer]:
+                  - /url: /ResetUserPassword/admin%20user
+        - link "New User" [ref=e48] [cursor=pointer]:
+          - /url: /AddUserFromManager
+          - text: New User

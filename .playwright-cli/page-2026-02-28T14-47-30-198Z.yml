@@ -1,0 +1,20 @@
+- generic [ref=e2]:
+  - paragraph
+  - generic [ref=e6]:
+    - heading "Login" [level=3] [ref=e7]
+    - generic [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]: Username
+        - textbox "Username" [ref=e11]:
+          - /placeholder: Enter username
+      - generic [ref=e12]:
+        - generic [ref=e13]: Password
+        - textbox "Password" [ref=e14]:
+          - /placeholder: Enter password
+      - button " Login" [ref=e16] [cursor=pointer]:
+        - generic [ref=e17]: 
+        - text: Login
+    - link " Create New User" [ref=e19] [cursor=pointer]:
+      - /url: /AddUser
+      - generic [ref=e20]: 
+      - text: Create New User
