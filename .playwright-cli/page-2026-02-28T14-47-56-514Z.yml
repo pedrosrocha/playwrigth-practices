@@ -1,0 +1,81 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link " Home" [ref=e4] [cursor=pointer]:
+        - /url: /MainPage
+        - generic [ref=e5]: 
+        - text: Home
+      - generic [ref=e6]:
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - link " Logout" [ref=e9] [cursor=pointer]:
+              - /url: /logout
+              - generic [ref=e10]: 
+              - text: Logout
+          - listitem [ref=e11]:
+            - link " Users" [ref=e12] [cursor=pointer]:
+              - /url: /UsersManagement
+              - generic [ref=e13]: 
+              - text: Users
+          - listitem [ref=e14]:
+            - link " Projects" [ref=e15] [cursor=pointer]:
+              - /url: /Projects
+              - generic [ref=e16]: 
+              - text: Projects
+          - listitem [ref=e17]:
+            - link " Test Specification" [ref=e18] [cursor=pointer]:
+              - /url: /TestSpecification
+              - generic [ref=e19]: 
+              - text: Test Specification
+        - combobox [ref=e21]:
+          - option "TO DO list" [selected]
+          - option "new SaaS"
+  - generic [ref=e22]:
+    - paragraph
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - heading "Welcome, admin user!" [level=1] [ref=e25]
+        - paragraph [ref=e26]: Select an option below to get started.
+      - generic [ref=e27]:
+        - link " Test Specification Create and manage your test cases." [ref=e29] [cursor=pointer]:
+          - /url: /TestSpecification
+          - generic [ref=e30]:
+            - generic [ref=e31]: 
+            - heading "Test Specification" [level=4] [ref=e32]
+            - paragraph [ref=e33]: Create and manage your test cases.
+        - link " Projects Organize and track your projects." [ref=e35] [cursor=pointer]:
+          - /url: /Projects
+          - generic [ref=e36]:
+            - generic [ref=e37]: 
+            - heading "Projects" [level=4] [ref=e38]
+            - paragraph [ref=e39]: Organize and track your projects.
+        - link " Users Manage user accounts and permissions." [ref=e41] [cursor=pointer]:
+          - /url: /UsersManagement
+          - generic [ref=e42]:
+            - generic [ref=e43]: 
+            - heading "Users" [level=4] [ref=e44]
+            - paragraph [ref=e45]: Manage user accounts and permissions.
+        - link " Logout Sign out of your account." [ref=e47] [cursor=pointer]:
+          - /url: /logout
+          - generic [ref=e48]:
+            - generic [ref=e49]: 
+            - heading "Logout" [level=4] [ref=e50]
+            - paragraph [ref=e51]: Sign out of your account.
+        - link " Add user Create a new user." [ref=e53] [cursor=pointer]:
+          - /url: /AddUserFromManager
+          - generic [ref=e54]:
+            - generic [ref=e55]: 
+            - heading "Add user" [level=4] [ref=e56]
+            - paragraph [ref=e57]: Create a new user.
+        - link " Add project Create a new project." [ref=e59] [cursor=pointer]:
+          - /url: /AddProject
+          - generic [ref=e60]:
+            - generic [ref=e61]: 
+            - heading "Add project" [level=4] [ref=e62]
+            - paragraph [ref=e63]: Create a new project.
+        - link " Reset Password Creates a new password for you account." [ref=e65] [cursor=pointer]:
+          - /url: /ResetUserPassword/admin%20user
+          - generic [ref=e66]:
+            - generic [ref=e67]: 
+            - heading "Reset Password" [level=4] [ref=e68]
+            - paragraph [ref=e69]: Creates a new password for you account.

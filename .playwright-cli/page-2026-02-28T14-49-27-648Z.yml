@@ -1,0 +1,53 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link " Home" [ref=e4] [cursor=pointer]:
+        - /url: /MainPage
+        - generic [ref=e5]: 
+        - text: Home
+      - generic [ref=e6]:
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - link " Logout" [ref=e9] [cursor=pointer]:
+              - /url: /logout
+              - generic [ref=e10]: 
+              - text: Logout
+          - listitem [ref=e11]:
+            - link " Users" [ref=e12] [cursor=pointer]:
+              - /url: /UsersManagement
+              - generic [ref=e13]: 
+              - text: Users
+          - listitem [ref=e14]:
+            - link " Projects" [ref=e15] [cursor=pointer]:
+              - /url: /Projects
+              - generic [ref=e16]: 
+              - text: Projects
+          - listitem [ref=e17]:
+            - link " Test Specification" [ref=e18] [cursor=pointer]:
+              - /url: /TestSpecification
+              - generic [ref=e19]: 
+              - text: Test Specification
+        - combobox [ref=e21]:
+          - option "TO DO list" [selected]
+          - option "new SaaS"
+  - generic [ref=e22]:
+    - paragraph
+    - generic [ref=e24]:
+      - heading "Add New Project" [level=1] [ref=e26]
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - generic [ref=e30]: Project Name
+          - textbox "Project Name" [ref=e31]:
+            - /placeholder: Enter Project Name
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - generic [ref=e34]: Start Date
+            - textbox "Start Date" [ref=e35]
+          - generic [ref=e36]:
+            - generic [ref=e37]: End Date
+            - textbox "End Date" [ref=e38]
+        - generic [ref=e39]:
+          - generic [ref=e40]: Description
+          - textbox "Description" [ref=e41]:
+            - /placeholder: Enter project description...
+        - button "Add Project" [ref=e42] [cursor=pointer]

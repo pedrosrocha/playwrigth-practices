@@ -1,0 +1,44 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link " Home" [ref=e4] [cursor=pointer]:
+        - /url: /MainPage
+        - generic [ref=e5]: 
+        - text: Home
+      - generic [ref=e6]:
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - link " Logout" [ref=e9] [cursor=pointer]:
+              - /url: /logout
+              - generic [ref=e10]: 
+              - text: Logout
+          - listitem [ref=e11]:
+            - link " Users" [ref=e12] [cursor=pointer]:
+              - /url: /UsersManagement
+              - generic [ref=e13]: 
+              - text: Users
+          - listitem [ref=e14]:
+            - link " Projects" [ref=e15] [cursor=pointer]:
+              - /url: /Projects
+              - generic [ref=e16]: 
+              - text: Projects
+          - listitem [ref=e17]:
+            - link " Test Specification" [ref=e18] [cursor=pointer]:
+              - /url: /TestSpecification
+              - generic [ref=e19]: 
+              - text: Test Specification
+        - combobox [ref=e21]:
+          - option "TO DO list" [selected]
+          - option "new SaaS"
+  - generic [ref=e22]:
+    - paragraph
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - banner [ref=e25]: Test Specification
+        - tree [ref=e28]:
+          - group [ref=e29]:
+            - treeitem "TO DO list" [level=1] [ref=e30] [cursor=pointer]
+      - generic [ref=e33]:
+        - heading "Project Details" [level=2] [ref=e34]
+        - paragraph [ref=e35]: Select a test suite or test case from the tree to see its details.
+    - text:      

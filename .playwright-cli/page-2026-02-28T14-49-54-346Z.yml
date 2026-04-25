@@ -1,0 +1,9 @@
+- generic [ref=e2]:
+  - paragraph
+  - generic [ref=e6]:
+    - heading "Reset admin user's password" [level=1] [ref=e8]
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e12]: New password
+        - textbox "New password" [ref=e13]
+      - button "Reset" [ref=e14] [cursor=pointer]
